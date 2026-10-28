@@ -1,0 +1,14 @@
+__pycache__/
+inputs/
+outputs/
+build/
+*.FIR
+*.fir
+*.BIN
+*.bin
+*.clut
+*.ppm
+*.o
+*.so
+*.elf
+*.zip

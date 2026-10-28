@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "model": "Canon EOS 80D",
+  "model_id": "0x80000350",
+  "version": "1.0.3",
+  "file_size": 28931264,
+  "sha256": "aa25b4c1a966b3611078ca86b348475dd676a1eabc6f74a0bdc308bc7b116f8c",
+  "matches_downloaded_official_reference": true,
+  "checksum": {
+    "kind": "ones-complement sum of bytes excluding 0x20..0x23",
+    "stored": "0x2424b6e1",
+    "calculated": "0x2424b6e1",
+    "valid": true
+  },
+  "updater_header_classification": "AES-style v4 header",
+  "classification_basis": "nonzero fields at 0xc0..0x11f; fir_tool2.py convention, not cryptographic verification",
+  "authentication": {
+    "hmac_sha1_present": {
+      "updater": true,
+      "main_payload": true
+    },
+    "hmac_verified": false,
+    "keys_available": false
+  },
+  "regions": [
+    {
+      "name": "outer-header",
+      "offset": 0,
+      "offset_hex": "0x0",
+      "length": 288,
+      "end_exclusive": 288,
+      "sha256": "05167d3658052bc3fdf9f139b392ada775e60cd97b94823c56f687ceb6a97b5f",
+      "byte_entropy": 5.468380713053656,
+      "runtime_address": null
+    },
+    {
+      "name": "stored-updater",
+      "offset": 288,
+      "offset_hex": "0x120",
+      "length": 2466416,
+      "end_exclusive": 2466704,
+      "sha256": "894d76638264774ee18f51ddede36b962ff6f3176cd9e61fcec66d7b0321c77a",
+      "byte_entropy": 7.999921039825646,
+      "runtime_address": null
+    },
+    {
+      "name": "stored-main-payload",
+      "offset": 2466704,
+      "offset_hex": "0x25a390",
+      "length": 26464560,
+      "end_exclusive": 28931264,
+      "sha256": "1e0a94afdceab5c49447d4387e45206a3a889b76347cf28a5179dae21fd10263",
+      "byte_entropy": 7.99999299221373,
+      "runtime_address": null
+    },
+    {
+      "name": "stored-main-data",
+      "offset": 2466832,
+      "offset_hex": "0x25a410",
+      "length": 26464432,
+      "end_exclusive": 28931264,
+      "sha256": "2ea0ff1ef798d6faf27ac7465c8427e74b5b2937c7c9c203a3306a22fe811933",
+      "byte_entropy": 7.999992994683092,
+      "runtime_address": null
+    }
+  ],
+  "limitations": [
+    "No payload decryption, disassembly, firmware re-signing, or hardware execution was performed.",
+    "A valid additive checksum does not establish authenticity or camera compatibility.",
+    "High entropy does not independently distinguish encryption from compression.",
+    "Stored file offsets are not runtime memory addresses."
+  ]
+}

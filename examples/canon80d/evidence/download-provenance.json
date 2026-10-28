@@ -1,0 +1,39 @@
+{
+  "source_page": "https://asia.canon/en/support/0400496402",
+  "download_url": "https://pdisp01.c-wss.com/gdl/WWUFORedirectTarget.do?id=MDQwMDAwNDk2NDAx&cmp=ACB&lang=EN",
+  "resolved_url": "https://gdlp01.c-wss.com/gds/4/0400004964/01/eos80d-v103-win.zip",
+  "package_sha256": "55b2bc2b5d494807a43d4a1faab0312c28eb28364c1b844b8becbe16bd905a8f",
+  "package_bytes": 30849811,
+  "files": [
+    {
+      "path": "official/80D00103.FIR",
+      "bytes": 28931264,
+      "sha256": "aa25b4c1a966b3611078ca86b348475dd676a1eabc6f74a0bdc308bc7b116f8c"
+    },
+    {
+      "path": "official/update-procedure-pdf/80d-firmwareupdate-sp.pdf",
+      "bytes": 373553,
+      "sha256": "717c2d70fa812a04c814e5aa26d6b04eb0b14bd08d1ceda1f978e127273f7ee1"
+    },
+    {
+      "path": "official/update-procedure-pdf/80d-firmwareupdate-fr.pdf",
+      "bytes": 439825,
+      "sha256": "d66f2301a2718183220acc0b37b94c57293f51a0f440c4e46187d197609bd206"
+    },
+    {
+      "path": "official/update-procedure-pdf/80d-firmwareupdate-zh.pdf",
+      "bytes": 384180,
+      "sha256": "eb5cf277fcd681792a51043b1d6378471cbbd8c406b51f978f760bd36b0d2737"
+    },
+    {
+      "path": "official/update-procedure-pdf/80d-firmwareupdate-jp.pdf",
+      "bytes": 428031,
+      "sha256": "50951f193be46c1388abe5a80eb55477b08b4e0c9bca424a912857adb6aea269"
+    },
+    {
+      "path": "official/update-procedure-pdf/80d-firmwareupdate-en.pdf",
+      "bytes": 371513,
+      "sha256": "7c9f154934c4b813cfa6d4b2de5aa74e9071485f1b83d275778d7baecfed4ff4"
+    }
+  ]
+}

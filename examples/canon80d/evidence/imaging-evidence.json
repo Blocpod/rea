@@ -1,0 +1,375 @@
+{
+  "schema_version": 1,
+  "target": "Canon EOS 80D firmware 1.0.3",
+  "source_repository": "https://github.com/reticulatedpines/magiclantern_simplified",
+  "source_revision": "142472e95054d73640f50789ac0fd66325499d82",
+  "observed_at": "2026-10-27",
+  "scope": "Offline source inspection and theoretical arithmetic; no physical camera, no runtime firmware verification.",
+  "findings": [
+    {
+      "id": "IMG-001",
+      "evidence_type": "observed_source",
+      "claim": "80D build target is firmware 1.0.3, ARMv7-R Thumb, with boot-d678.o.",
+      "source_path": "platform/80D.103/Makefile",
+      "line_start": 1,
+      "line_end": 25,
+      "url": "https://github.com/reticulatedpines/magiclantern_simplified/blob/142472e95054d73640f50789ac0fd66325499d82/platform/80D.103/Makefile#L1",
+      "limitation": "A target definition is not proof of a camera-qualified image."
+    },
+    {
+      "id": "IMG-002",
+      "evidence_type": "observed_source",
+      "claim": "EDMAC setup, routing, start/abort and callbacks are no-op overrides; engine writes are no-ops; shamem_read returns zero.",
+      "source_path": "platform/80D.103/function_overrides.c",
+      "line_start": 112,
+      "line_end": 181,
+      "url": "https://github.com/reticulatedpines/magiclantern_simplified/blob/142472e95054d73640f50789ac0fd66325499d82/platform/80D.103/function_overrides.c#L112",
+      "limitation": "Raw-frame transfer and sensor register control require actual implementations before generic recorder code can be useful."
+    },
+    {
+      "id": "IMG-003",
+      "evidence_type": "observed_source",
+      "claim": "80D MVR recording constants are explicitly marked junk; HD DMA address is zero.",
+      "source_path": "platform/80D.103/consts.h",
+      "line_start": 78,
+      "line_end": 131,
+      "url": "https://github.com/reticulatedpines/magiclantern_simplified/blob/142472e95054d73640f50789ac0fd66325499d82/platform/80D.103/consts.h#L78",
+      "limitation": "No reliable H.264 recorder/encoder control is established by these definitions."
+    },
+    {
+      "id": "IMG-004",
+      "evidence_type": "observed_source",
+      "claim": "State-object hooks disabled and programmatic image capture explicitly marked not working.",
+      "source_path": "platform/80D.103/features.h",
+      "line_start": 26,
+      "line_end": 42,
+      "url": "https://github.com/reticulatedpines/magiclantern_simplified/blob/142472e95054d73640f50789ac0fd66325499d82/platform/80D.103/features.h#L26",
+      "limitation": "A shutter automation extension must fix capture callbacks and failure cases first."
+    },
+    {
+      "id": "IMG-005",
+      "evidence_type": "observed_source",
+      "claim": "SRM memory pool support is marked untested; required buffer size not found.",
+      "source_path": "platform/80D.103/internals.h",
+      "line_start": 17,
+      "line_end": 19,
+      "url": "https://github.com/reticulatedpines/magiclantern_simplified/blob/142472e95054d73640f50789ac0fd66325499d82/platform/80D.103/internals.h#L17",
+      "limitation": "Memory stubs existing does not establish buffer ownership, alignment, cache coherency or capture lifetime."
+    },
+    {
+      "id": "IMG-006",
+      "evidence_type": "observed_source",
+      "claim": "Only bench and file_man are included; raw recording and crop modules are hidden.",
+      "source_path": "platform/80D.103/modules.hidden",
+      "line_start": 1,
+      "line_end": 18,
+      "url": "https://github.com/reticulatedpines/magiclantern_simplified/blob/142472e95054d73640f50789ac0fd66325499d82/platform/80D.103/modules.hidden#L1",
+      "limitation": "Unhiding modules does not implement their missing primitives."
+    },
+    {
+      "id": "IMG-007",
+      "evidence_type": "observed_source",
+      "claim": "Picture-style selection/settings are whitelisted; MVR recording property handlers are denied.",
+      "source_path": "platform/80D.103/property_whitelist.h",
+      "line_start": 28,
+      "line_end": 50,
+      "url": "https://github.com/reticulatedpines/magiclantern_simplified/blob/142472e95054d73640f50789ac0fd66325499d82/platform/80D.103/property_whitelist.h#L28",
+      "limitation": "This is a narrower control surface than a 3D LUT engine."
+    },
+    {
+      "id": "IMG-008",
+      "evidence_type": "observed_source",
+      "claim": "The 80D uses 11 picture styles. Shared picture style struct exposes contrast/sharpness/saturation/color tone plus fineness/threshold.",
+      "source_path": "src/picstyle.c",
+      "line_start": 97,
+      "line_end": 110,
+      "url": "https://github.com/reticulatedpines/magiclantern_simplified/blob/142472e95054d73640f50789ac0fd66325499d82/src/picstyle.c#L97",
+      "limitation": "Not an arbitrary matrix or cube-LUT API. 80D NUM_PICSTYLES=11 is in consts.h:82."
+    },
+    {
+      "id": "IMG-009",
+      "evidence_type": "observed_source",
+      "claim": "MLV Lite disables lossless compression when DIGIC generation is not 5.",
+      "source_path": "modules/raw_video/mlv_lite/mlv_lite.c",
+      "line_start": 4551,
+      "line_end": 4557,
+      "url": "https://github.com/reticulatedpines/magiclantern_simplified/blob/142472e95054d73640f50789ac0fd66325499d82/modules/raw_video/mlv_lite/mlv_lite.c#L4551",
+      "limitation": "This does not prove hardware lacks a codec, only that this recorder has no working D6 integration."
+    },
+    {
+      "id": "IMG-010",
+      "evidence_type": "observed_source",
+      "claim": "The current crop-rec camera-init branches cover 5D3/EOSM/700D/650D/100D/6D and contain no 80D path.",
+      "source_path": "modules/crop_rec/crop_rec.c",
+      "line_start": 1939,
+      "line_end": 2025,
+      "url": "https://github.com/reticulatedpines/magiclantern_simplified/blob/142472e95054d73640f50789ac0fd66325499d82/modules/crop_rec/crop_rec.c#L1939",
+      "limitation": "Other cameras' 3K/4K crop settings cannot be copied to 80D safely."
+    },
+    {
+      "id": "IMG-011",
+      "evidence_type": "observed_source",
+      "claim": "80D stores mapped YUV LiveView buffers and Ximr compositor symbols.",
+      "source_path": "platform/80D.103/consts.h",
+      "line_start": 68,
+      "line_end": 76,
+      "url": "https://github.com/reticulatedpines/magiclantern_simplified/blob/142472e95054d73640f50789ac0fd66325499d82/platform/80D.103/consts.h#L68",
+      "limitation": "Display preview modifications need buffer format, ownership and synchronization validation; they do not automatically affect saved JPEG/video."
+    },
+    {
+      "id": "IMG-012",
+      "evidence_type": "observed_source",
+      "claim": "File create/open/read/write/size/rename/delete and GUI/task primitives have recovered addresses.",
+      "source_path": "platform/80D.103/stubs.S",
+      "line_start": 40,
+      "line_end": 64,
+      "url": "https://github.com/reticulatedpines/magiclantern_simplified/blob/142472e95054d73640f50789ac0fd66325499d82/platform/80D.103/stubs.S#L40",
+      "limitation": "Candidate integration for asynchronous post-shot JPEG processing; actual call signatures and behavior still need camera verification."
+    },
+    {
+      "id": "IMG-013",
+      "evidence_type": "observed_source",
+      "claim": "80D calibration matrix exists in shared raw code.",
+      "source_path": "src/raw.c",
+      "line_start": 404,
+      "line_end": 412,
+      "url": "https://github.com/reticulatedpines/magiclantern_simplified/blob/142472e95054d73640f50789ac0fd66325499d82/src/raw.c#L404",
+      "limitation": "A raw color matrix does not demonstrate access to live RAW buffers or a new camera color pipeline."
+    },
+    {
+      "id": "IMG-014",
+      "evidence_type": "observed_source",
+      "claim": "Frame rate base clock is copied from 700D.",
+      "source_path": "src/fps-engio.c",
+      "line_start": 282,
+      "line_end": 284,
+      "url": "https://github.com/reticulatedpines/magiclantern_simplified/blob/142472e95054d73640f50789ac0fd66325499d82/src/fps-engio.c#L282",
+      "limitation": "Do not treat FPS values or register definitions as measured 80D timings."
+    },
+    {
+      "id": "IMG-015",
+      "evidence_type": "observed_source",
+      "claim": "Shared raw backend uses EDMAC geometry/buffer detection; 80D does not enable CONFIG_RAW_LIVEVIEW or CONFIG_RAW_PHOTO in its platform files.",
+      "source_path": "src/raw.c",
+      "line_start": 695,
+      "line_end": 787,
+      "url": "https://github.com/reticulatedpines/magiclantern_simplified/blob/142472e95054d73640f50789ac0fd66325499d82/src/raw.c#L695",
+      "limitation": "Generic raw backend is not an 80D port. source/config-defines.h includes platform internals and features directly."
+    }
+  ],
+  "primary_web_sources": [
+    {
+      "url": "https://asia.canon/en/support/6200320100",
+      "claim": "80D records 6000x4000 RAW/JPEG stills, 14-bit RAW; UHS-I SD support; factory movie maximum Full HD with mode-dependent rates.",
+      "evidence_type": "manufacturer_specification"
+    },
+    {
+      "url": "https://www.sdcard.org/developers/sd-standard-overview/bus-speed-default-speed-high-speed-uhs-sd-express/",
+      "claim": "Standard UHS-I maximum bus interface speed is 104 MB/s, not a guarantee of camera/card sustained writes.",
+      "evidence_type": "standards_body_specification"
+    }
+  ],
+  "calculations": {
+    "formula": "width * height * bits_per_pixel / 8 * frames_per_second; excludes padding, frame metadata, filesystem overhead, audio and buffer copies.",
+    "units": "decimal MB/s",
+    "raw_bandwidth": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "bits_per_pixel": 10,
+        "bytes_per_frame": 2592000.0,
+        "MB_per_s_24": 62.208,
+        "MB_per_s_30": 77.76
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "bits_per_pixel": 12,
+        "bytes_per_frame": 3110400.0,
+        "MB_per_s_24": 74.6496,
+        "MB_per_s_30": 93.312
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "bits_per_pixel": 14,
+        "bytes_per_frame": 3628800.0,
+        "MB_per_s_24": 87.0912,
+        "MB_per_s_30": 108.864
+      },
+      {
+        "width": 2560,
+        "height": 1080,
+        "bits_per_pixel": 10,
+        "bytes_per_frame": 3456000.0,
+        "MB_per_s_24": 82.944,
+        "MB_per_s_30": 103.68
+      },
+      {
+        "width": 2560,
+        "height": 1080,
+        "bits_per_pixel": 12,
+        "bytes_per_frame": 4147200.0,
+        "MB_per_s_24": 99.5328,
+        "MB_per_s_30": 124.416
+      },
+      {
+        "width": 2560,
+        "height": 1080,
+        "bits_per_pixel": 14,
+        "bytes_per_frame": 4838400.0,
+        "MB_per_s_24": 116.1216,
+        "MB_per_s_30": 145.152
+      },
+      {
+        "width": 2560,
+        "height": 1440,
+        "bits_per_pixel": 10,
+        "bytes_per_frame": 4608000.0,
+        "MB_per_s_24": 110.592,
+        "MB_per_s_30": 138.24
+      },
+      {
+        "width": 2560,
+        "height": 1440,
+        "bits_per_pixel": 12,
+        "bytes_per_frame": 5529600.0,
+        "MB_per_s_24": 132.7104,
+        "MB_per_s_30": 165.888
+      },
+      {
+        "width": 2560,
+        "height": 1440,
+        "bits_per_pixel": 14,
+        "bytes_per_frame": 6451200.0,
+        "MB_per_s_24": 154.8288,
+        "MB_per_s_30": 193.536
+      },
+      {
+        "width": 3072,
+        "height": 1024,
+        "bits_per_pixel": 10,
+        "bytes_per_frame": 3932160.0,
+        "MB_per_s_24": 94.37184,
+        "MB_per_s_30": 117.9648
+      },
+      {
+        "width": 3072,
+        "height": 1024,
+        "bits_per_pixel": 12,
+        "bytes_per_frame": 4718592.0,
+        "MB_per_s_24": 113.246208,
+        "MB_per_s_30": 141.55776
+      },
+      {
+        "width": 3072,
+        "height": 1024,
+        "bits_per_pixel": 14,
+        "bytes_per_frame": 5505024.0,
+        "MB_per_s_24": 132.120576,
+        "MB_per_s_30": 165.15072
+      },
+      {
+        "width": 3840,
+        "height": 2160,
+        "bits_per_pixel": 10,
+        "bytes_per_frame": 10368000.0,
+        "MB_per_s_24": 248.832,
+        "MB_per_s_30": 311.04
+      },
+      {
+        "width": 3840,
+        "height": 2160,
+        "bits_per_pixel": 12,
+        "bytes_per_frame": 12441600.0,
+        "MB_per_s_24": 298.5984,
+        "MB_per_s_30": 373.248
+      },
+      {
+        "width": 3840,
+        "height": 2160,
+        "bits_per_pixel": 14,
+        "bytes_per_frame": 14515200.0,
+        "MB_per_s_24": 348.3648,
+        "MB_per_s_30": 435.456
+      },
+      {
+        "width": 4096,
+        "height": 2160,
+        "bits_per_pixel": 10,
+        "bytes_per_frame": 11059200.0,
+        "MB_per_s_24": 265.4208,
+        "MB_per_s_30": 331.776
+      },
+      {
+        "width": 4096,
+        "height": 2160,
+        "bits_per_pixel": 12,
+        "bytes_per_frame": 13271040.0,
+        "MB_per_s_24": 318.50496,
+        "MB_per_s_30": 398.1312
+      },
+      {
+        "width": 4096,
+        "height": 2160,
+        "bits_per_pixel": 14,
+        "bytes_per_frame": 15482880.0,
+        "MB_per_s_24": 371.58912,
+        "MB_per_s_30": 464.4864
+      },
+      {
+        "width": 6000,
+        "height": 4000,
+        "bits_per_pixel": 10,
+        "bytes_per_frame": 30000000.0,
+        "MB_per_s_24": 720.0,
+        "MB_per_s_30": 900.0
+      },
+      {
+        "width": 6000,
+        "height": 4000,
+        "bits_per_pixel": 12,
+        "bytes_per_frame": 36000000.0,
+        "MB_per_s_24": 864.0,
+        "MB_per_s_30": 1080.0
+      },
+      {
+        "width": 6000,
+        "height": 4000,
+        "bits_per_pixel": 14,
+        "bytes_per_frame": 42000000.0,
+        "MB_per_s_24": 1008.0,
+        "MB_per_s_30": 1260.0
+      }
+    ],
+    "lut_memory": [
+      {
+        "size": 17,
+        "rgb16_bytes": 29478,
+        "rgb8_bytes": 14739
+      },
+      {
+        "size": 33,
+        "rgb16_bytes": 215622,
+        "rgb8_bytes": 107811
+      },
+      {
+        "size": 65,
+        "rgb16_bytes": 1647750,
+        "rgb8_bytes": 823875
+      }
+    ]
+  },
+  "unknowns": [
+    "Actual installed firmware version",
+    "Actual 80D sustained SD write speed",
+    "Full sensor and LiveView readout modes/timings",
+    "Working RAW DMA channel and callback routing",
+    "Usable aligned memory pool and cache policy",
+    "Native encoder maximum geometry/level and profile compatibility",
+    "JPEG engine extension points and whether arbitrary LUT can be applied natively",
+    "Display filter hook behavior and performance",
+    "Thermal stability and power behavior",
+    "Maximum safe frame size/fps/bit depth for a new recorder"
+  ]
+}

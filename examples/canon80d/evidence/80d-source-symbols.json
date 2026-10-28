@@ -1,0 +1,704 @@
+{
+  "schema_version": 1,
+  "model": "Canon EOS 80D",
+  "firmware": "1.0.3",
+  "source_repository": "https://github.com/reticulatedpines/magiclantern_simplified",
+  "source_revision": "142472e95054d73640f50789ac0fd66325499d82",
+  "source_path": "platform/80D.103/stubs.S",
+  "source_sha256": "a3d670a2c269c83840e0685384fc1de945e02217fbb8e1902fd59fa0437263cf",
+  "symbols": [
+    {
+      "name": "pre_cstart_func",
+      "address": 4262277452,
+      "address_hex": "0xfe0d314c",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 34,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "cstart",
+      "address": 4262277484,
+      "address_hex": "0xfe0d316c",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 35,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "init_task",
+      "address": 4262278020,
+      "address_hex": "0xfe0d3384",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 38,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "msleep",
+      "address": 3792,
+      "address_hex": "0xed0",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 46,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "task_create",
+      "address": 4080,
+      "address_hex": "0xff0",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 47,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "_FIO_CreateFile",
+      "address": 4266141626,
+      "address_hex": "0xfe4827ba",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 51,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "_FIO_OpenFile",
+      "address": 4266141508,
+      "address_hex": "0xfe482744",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 52,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "FIO_CloseFile",
+      "address": 4266142224,
+      "address_hex": "0xfe482a10",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 53,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "_FIO_ReadFile",
+      "address": 4266141840,
+      "address_hex": "0xfe482890",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 54,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "_FIO_WriteFile",
+      "address": 4266142114,
+      "address_hex": "0xfe4829a2",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 55,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "FIO_SeekSkipFile",
+      "address": 4266141952,
+      "address_hex": "0xfe482900",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 56,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "_FIO_GetFileSize",
+      "address": 4266142460,
+      "address_hex": "0xfe482afc",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 57,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "_FIO_RemoveFile",
+      "address": 4266141732,
+      "address_hex": "0xfe482824",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 58,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "_FIO_RenameFile",
+      "address": 4266143360,
+      "address_hex": "0xfe482e80",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 59,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "_FIO_CreateDirectory",
+      "address": 4266143742,
+      "address_hex": "0xfe482ffe",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 60,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "_FIO_FindFirstEx",
+      "address": 4266144710,
+      "address_hex": "0xfe4833c6",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 61,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "FIO_FindNextEx",
+      "address": 4266144858,
+      "address_hex": "0xfe48345a",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 62,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "FIO_FindClose",
+      "address": 4266144988,
+      "address_hex": "0xfe4834dc",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 63,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "FIO_Flush",
+      "address": 4266143982,
+      "address_hex": "0xfe4830ee",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 64,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "DryosDebugMsg",
+      "address": 2147497440,
+      "address_hex": "0x800035e0",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 67,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "call",
+      "address": 4266148398,
+      "address_hex": "0xfe48422e",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 70,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "SetHPTimerNextTick",
+      "address": 4266343106,
+      "address_hex": "0xfe4b3ac2",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 73,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "SetHPTimerAfterNow",
+      "address": 4266343026,
+      "address_hex": "0xfe4b3a72",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 74,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "SetTimerAfter",
+      "address": 4266147812,
+      "address_hex": "0xfe483fe4",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 75,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "CancelTimer",
+      "address": 4266147930,
+      "address_hex": "0xfe48405a",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 76,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "_AllocateMemory",
+      "address": 1238,
+      "address_hex": "0x4d6",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 79,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "_FreeMemory",
+      "address": 1648,
+      "address_hex": "0x670",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 80,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "GetMemoryInformation",
+      "address": 896,
+      "address_hex": "0x380",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 81,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "GetSizeOfMaxRegion",
+      "address": 852,
+      "address_hex": "0x354",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 82,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "_alloc_dma_memory",
+      "address": 2147508920,
+      "address_hex": "0x800062b8",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 83,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "_free_dma_memory",
+      "address": 2147508964,
+      "address_hex": "0x800062e4",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 84,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "_malloc",
+      "address": 4267757872,
+      "address_hex": "0xfe60d130",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 85,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "_free",
+      "address": 4267757926,
+      "address_hex": "0xfe60d166",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 86,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "malloc_info",
+      "address": 4264409260,
+      "address_hex": "0xfe2db8ac",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 89,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "memmap_info",
+      "address": 4264212048,
+      "address_hex": "0xfe2ab650",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 90,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "smemShowFix",
+      "address": 4262852422,
+      "address_hex": "0xfe15f746",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 91,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "sysmem_info",
+      "address": 4264409412,
+      "address_hex": "0xfe2db944",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 92,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "uart_printf",
+      "address": 4266147072,
+      "address_hex": "0xfe483d00",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 95,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "vsnprintf",
+      "address": 2147505324,
+      "address_hex": "0x800054ac",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 96,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "task_trampoline",
+      "address": 2147489580,
+      "address_hex": "0x8000172c",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 106,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "_get_task_info_by_id",
+      "address": 2147488604,
+      "address_hex": "0x8000135c",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 107,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "CreateRecursiveLock",
+      "address": 9850,
+      "address_hex": "0x267a",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 110,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "AcquireRecursiveLock",
+      "address": 10496,
+      "address_hex": "0x2900",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 111,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "ReleaseRecursiveLock",
+      "address": 10696,
+      "address_hex": "0x29c8",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 112,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "create_named_semaphore",
+      "address": 9184,
+      "address_hex": "0x23e0",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 115,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "take_semaphore",
+      "address": 9430,
+      "address_hex": "0x24d6",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 116,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "take_semaphore_now",
+      "address": 9382,
+      "address_hex": "0x24a6",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 117,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "give_semaphore",
+      "address": 9550,
+      "address_hex": "0x254e",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 118,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "SetGUIRequestMode",
+      "address": 4266026386,
+      "address_hex": "0xfe466592",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 123,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "gui_main_task",
+      "address": 4263027404,
+      "address_hex": "0xfe18a2cc",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 124,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "gui_massive_event_loop",
+      "address": 4264611584,
+      "address_hex": "0xfe30cf00",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 125,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "gui_enqueue_message",
+      "address": 4263027300,
+      "address_hex": "0xfe18a264",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 126,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "gui_init_end",
+      "address": 4266108724,
+      "address_hex": "0xfe47a734",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 127,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "GUI_Control",
+      "address": 4263027826,
+      "address_hex": "0xfe18a472",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 128,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "dialog_redraw",
+      "address": 4266201052,
+      "address_hex": "0xfe490fdc",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 131,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "dialog_set_property_str",
+      "address": 4266149840,
+      "address_hex": "0xfe4847d0",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 132,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "CancelDateTimer",
+      "address": 4268040004,
+      "address_hex": "0xfe651f44",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 135,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "msg_queue_create",
+      "address": 8480,
+      "address_hex": "0x2120",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 138,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "msg_queue_receive",
+      "address": 8672,
+      "address_hex": "0x21e0",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 139,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "msg_queue_post",
+      "address": 9012,
+      "address_hex": "0x2334",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 140,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "msg_queue_count",
+      "address": 9066,
+      "address_hex": "0x236a",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 141,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "AllocateMemoryResource",
+      "address": 4267196006,
+      "address_hex": "0xfe583e66",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 145,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "AllocateContinuousMemoryResource",
+      "address": 4267196052,
+      "address_hex": "0xfe583e94",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 146,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "FreeMemoryResource",
+      "address": 4267196218,
+      "address_hex": "0xfe583f3a",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 147,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "SRM_AllocateMemoryResourceFor1stJob",
+      "address": 4266000114,
+      "address_hex": "0xfe45fef2",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 149,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "SRM_FreeMemoryResourceFor1stJob",
+      "address": 4266009402,
+      "address_hex": "0xfe46233a",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 150,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "ConcatMemorySuite",
+      "address": 4266098234,
+      "address_hex": "0xfe477e3a",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 152,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "GetFirstChunkFromSuite",
+      "address": 4266095992,
+      "address_hex": "0xfe477578",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 153,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "GetNextMemoryChunk",
+      "address": 4266098164,
+      "address_hex": "0xfe477df4",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 154,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "GetMemoryAddressOfMemoryChunk",
+      "address": 4266095480,
+      "address_hex": "0xfe477378",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 155,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "CreateMemoryChunk",
+      "address": 4266094374,
+      "address_hex": "0xfe476f26",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 156,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "AddMemoryChunk",
+      "address": 4266095852,
+      "address_hex": "0xfe4774ec",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 157,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "CreateMemorySuite",
+      "address": 4266097134,
+      "address_hex": "0xfe4779ee",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 158,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "DeleteMemorySuite",
+      "address": 4266096392,
+      "address_hex": "0xfe477708",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 159,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "_LoadCalendarFromRTC",
+      "address": 4267838558,
+      "address_hex": "0xfe620c5e",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 163,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "ErrForCamera_handler",
+      "address": 4268364818,
+      "address_hex": "0xfe6a1412",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 164,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "prop_register_slave",
+      "address": 4266150922,
+      "address_hex": "0xfe484c0a",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 167,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "_prop_request_change",
+      "address": 4266151130,
+      "address_hex": "0xfe484cda",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 168,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "_prop_cleanup",
+      "address": 4266152428,
+      "address_hex": "0xfe4851ec",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 169,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "GetCFnData",
+      "address": 4265021786,
+      "address_hex": "0xfe37115a",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 172,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "SetCFnData",
+      "address": 4265022090,
+      "address_hex": "0xfe37128a",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 173,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "XimrExe",
+      "address": 4263686908,
+      "address_hex": "0xfe22b2fc",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 180,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "PlayMain_handler",
+      "address": 4265720266,
+      "address_hex": "0xfe41b9ca",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 193,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "ShootOlcApp_handler",
+      "address": 4268033818,
+      "address_hex": "0xfe65071a",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 194,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "LiveViewApp_handler",
+      "address": 4265154968,
+      "address_hex": "0xfe391998",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 195,
+      "verified_against_local_rom": false
+    },
+    {
+      "name": "PlayMovieGuideApp_handler",
+      "address": 4264751444,
+      "address_hex": "0xfe32f154",
+      "declaration_kind": "THUMB_FN",
+      "source_line": 197,
+      "verified_against_local_rom": false
+    }
+  ],
+  "limitations": [
+    "Published source mappings only; no local ROM was available to verify instructions.",
+    "Zero-address and expression-based declarations are omitted.",
+    "THUMB_FN is source-declared mode, not a disassembly finding."
+  ]
+}
